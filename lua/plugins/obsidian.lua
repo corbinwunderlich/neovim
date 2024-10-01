@@ -44,6 +44,10 @@ require("render-markdown").setup({
 
 	heading = {
 		border = true,
+		above = " ",
+		below = " ",
+		position = "inline",
+		sign = false,
 	},
 
 	checkbox = {
@@ -53,6 +57,10 @@ require("render-markdown").setup({
 		checked = {
 			icon = "󰡖 ",
 		},
+	},
+
+	bullet = {
+		right_pad = 1,
 	},
 })
 

@@ -47,7 +47,27 @@ require("tokyonight").setup({
 			hl = c.bg_light,
 		}
 
-		hl.RenderMarkdownH1BG = {
+		hl.RenderMarkdownH1Bg = {
+			bg = c.bg_light,
+		}
+
+		hl.RenderMarkdownH2Bg = {
+			bg = c.bg_light,
+		}
+
+		hl.RenderMarkdownH3Bg = {
+			bg = c.bg_light,
+		}
+
+		hl.RenderMarkdownH4Bg = {
+			bg = c.bg_light,
+		}
+
+		hl.RenderMarkdownH5Bg = {
+			bg = c.bg_light,
+		}
+
+		hl.RenderMarkdownH6Bg = {
 			bg = c.bg_light,
 		}
 	end,
