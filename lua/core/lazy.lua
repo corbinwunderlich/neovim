@@ -141,6 +141,9 @@ require("lazy").setup({
 		{
 			"MeanderingProgrammer/render-markdown.nvim",
 		},
+		{
+			"akinsho/git-conflict.nvim",
+		},
 
 		install = {
 			colorscheme = {
