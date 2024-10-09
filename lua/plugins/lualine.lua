@@ -27,6 +27,10 @@ local minimal_theme = {
 	},
 }
 
+local function getWords()
+	return vim.fn.wordcount().words
+end
+
 require("lualine").setup({
 	options = {
 		theme = minimal_theme,
@@ -54,7 +58,7 @@ require("lualine").setup({
 			"%=", --[[ add your center compoentnts here in place of this comment ]]
 		},
 		lualine_x = {},
-		lualine_y = { "encoding", "filetype" },
+		lualine_y = { getWords, "encoding", "filetype" },
 		lualine_z = {},
 	},
 	inactive_sections = {
