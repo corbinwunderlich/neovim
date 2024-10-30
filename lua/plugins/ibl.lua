@@ -1,16 +1,15 @@
-require("ibl").setup {
-    scope = {
-        enabled = false
-    }
-}
+require("ibl").setup({
+	scope = {
+		enabled = false,
+	},
+})
 
-require("mini.indentscope").setup {
-    draw = {
-        delay = 0
-    },
+require("mini.indentscope").setup({
+	draw = {
+		delay = 0,
+	},
 
-    symbol = "▎"
-}
+	symbol = "▎",
+})
 
-
-vim.cmd("hi MiniIndentscopeSymbol guifg=#595d70")
+vim.cmd("hi MiniIndentscopeSymbol guifg=#70b7d8")

@@ -32,15 +32,15 @@ require("tokyonight").setup({
 		}
 
 		hl.LineNr = {
-			fg = "#636e9e",
+			fg = "#7496b2",
 		}
 
 		hl.LineNrAbove = {
-			fg = "#636e9e",
+			fg = "#7496b2",
 		}
 
 		hl.LineNrBelow = {
-			fg = "#636e9e",
+			fg = "#7496b2",
 		}
 
 		hl.RenderMarkdownCode = {
