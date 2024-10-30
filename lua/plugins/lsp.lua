@@ -21,10 +21,13 @@ local lsp_attach = function(client, bufnr)
 	vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 end
 
+vim.api.nvim_set_hl(0, "cmpCursorLine", { bg = "NONE", fg = "#65bcff", bold = false })
+
 require("cmp").setup({
 	window = {
 		completion = {
 			border = "rounded",
+			winhighlight = "CursorLine:cmpCursorLine",
 		},
 	},
 
