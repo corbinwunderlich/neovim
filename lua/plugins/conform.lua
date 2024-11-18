@@ -28,7 +28,7 @@ require("conform").setup({
 			"prettier",
 		},
 		nix = {
-			"nixfmt",
+			"alejandra",
 		},
 	},
 
