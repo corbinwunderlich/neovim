@@ -21,4 +21,7 @@ vim.opt.linebreak = true
 
 vim.opt.scrolloff = 8
 
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
+
 vim.api.nvim_set_option("clipboard", "unnamed")
