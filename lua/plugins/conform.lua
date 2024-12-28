@@ -3,29 +3,8 @@ require("conform").setup({
 		lua = {
 			"stylua",
 		},
-		bash = {
-			"beautysh",
-		},
-		cmake = {
-			"cmake_format",
-		},
-		python = {
-			"black",
-		},
-		json = {
-			"prettier",
-		},
-		javascript = {
-			"prettier",
-		},
-		typescript = {
-			"prettier",
-		},
 		java = {
 			"astyle",
-		},
-		yaml = {
-			"prettier",
 		},
 		nix = {
 			"alejandra",
