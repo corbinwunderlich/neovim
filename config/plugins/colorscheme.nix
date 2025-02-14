@@ -77,6 +77,7 @@ in {
       "TelescopeNormal"
       "TelescopeBorder"
       "TelescopePromptBorder"
+      "TelescopeSelection"
       "Pmenu"
       "Float"
     ];
