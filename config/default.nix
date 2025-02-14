@@ -6,4 +6,7 @@
   ...
 }: {
   imports = [./core/default.nix ./plugins/default.nix];
+
+  viAlias = true;
+  vimAlias = true;
 }
