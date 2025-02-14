@@ -1,0 +1,5 @@
+{...}: {
+  clipboard = {
+    register = "unnamed";
+  };
+}
