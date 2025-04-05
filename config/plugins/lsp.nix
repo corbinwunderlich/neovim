@@ -13,6 +13,10 @@
       typos_lsp = {
         enable = true;
       };
+
+      arduino_language_server.enable = true;
+
+      clangd.enable = true;
     };
 
     keymaps = {
