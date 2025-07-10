@@ -17,6 +17,8 @@
       arduino_language_server.enable = true;
 
       clangd.enable = true;
+
+      html.enable = true;
     };
 
     keymaps = {
@@ -28,6 +30,16 @@
         gt = "type_definition";
         "<leader>rn" = "rename";
         "<leader>c" = "code_action";
+      };
+    };
+  };
+
+  plugins.typescript-tools = {
+    enable = true;
+
+    settings = {
+      tsserver_format_options = {
+        semicolons = "insert";
       };
     };
   };
