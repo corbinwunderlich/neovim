@@ -19,6 +19,8 @@
       clangd.enable = true;
 
       html.enable = true;
+
+      svelte.enable = true;
     };
 
     keymaps = {
