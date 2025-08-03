@@ -42,6 +42,9 @@
     settings = {
       tsserver_format_options = {
         semicolons = "insert";
+        indentSize = 4;
+        baseIndentSize = 4;
+        tabSize = 4;
       };
     };
   };
