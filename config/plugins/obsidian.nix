@@ -5,8 +5,8 @@
     settings = {
       workspaces = [
         {
-          name = "ninth-grade";
-          path = "~/Documents/ninth-grade";
+          name = "tenth-grade";
+          path = "~/Documents/tenth-grade";
         }
       ];
 
