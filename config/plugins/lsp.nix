@@ -55,23 +55,16 @@
     lspServersToEnable = "all";
   };
 
-  plugins.cmp = {
+  plugins.blink-cmp = {
     enable = true;
 
-    autoEnableSources = true;
-
     settings = {
-      sources = [
-        {name = "nvim_lsp";}
-        {name = "luasnip";}
-      ];
-
-      window = {
-        completion = {
-          border = "rounded";
-          winhighlight = "CursorLine:cmpCursorLine";
-        };
+      completion = {
+        menu = {border = "single";};
+        documentation = {window = {border = "single";};};
       };
+
+      signature = {window = {border = "single";};};
     };
   };
 }
