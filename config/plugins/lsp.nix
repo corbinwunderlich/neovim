@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   plugins.lsp = {
     enable = true;
 
@@ -65,6 +69,45 @@
       };
 
       signature = {window = {border = "single";};};
+
+      sources = {
+        providers.todo = {
+          name = "todo-txt";
+          module = "todo-blink";
+        };
+
+        default = [
+          "lsp"
+          "path"
+          "snippets"
+          "buffer"
+          "todo"
+        ];
+      };
     };
   };
+
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "todo-txt.nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "cche";
+        repo = "todo-txt.nvim";
+        rev = "main";
+        hash = "sha256-qaqjGnYMYh6XEEuITeZB3Ia1f2olux6+JVVC47cPxrA=";
+      };
+    })
+  ];
+
+  extraConfigLuaPost = ''
+        require("todo-txt").setup {
+            todo_file = vim.fn.expand("~/Documents/todo.txt"),
+            disable_default_mappings = true
+        }
+
+        vim.keymap.set("n", "<leader>tt", ":TodoList<CR>", { desc = "Todo List", noremap = true, silent = true })
+    vim.keymap.set("n", "<leader>ta", ":TodoAdd<CR>", { desc = "Add Todo", noremap = true, silent = true })
+    vim.keymap.set("n", "<leader>td", ":TodoDue<CR>", { desc = "Due Tasks", noremap = true, silent = true })
+    vim.keymap.set("n", "<leader>tz", ":TodoArchive<CR>", { desc = "Archive Done Tasks", noremap = true, silent = true })
+  '';
 }
