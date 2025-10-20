@@ -84,6 +84,10 @@
           "todo"
         ];
       };
+
+      fuzzy = {
+        use_unsafe_no_lock = true;
+      };
     };
   };
 
