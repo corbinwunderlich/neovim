@@ -2,18 +2,20 @@
   plugins.obsidian = {
     enable = true;
 
+    autoLoad = true;
+
     settings = {
+      completion = {
+        min_chars = 2;
+        blink = true;
+      };
+
       workspaces = [
         {
           name = "tenth-grade";
           path = "~/Documents/tenth-grade";
         }
       ];
-
-      daily_notes = {
-        folder = "dailies";
-        date_format = "%Y.%m.%d";
-      };
 
       ui = {
         checkboxes = {
