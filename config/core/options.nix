@@ -15,4 +15,27 @@
     incsearch = true;
     scrolloff = 8;
   };
+
+  autoCmd = [
+    {
+      event = [
+        "BufRead"
+        "BufNewFile"
+      ];
+
+      pattern = ["*"];
+
+      callback = {
+        __raw = ''
+          function()
+            local filepath = vim.fn.expand("%:p:h")
+
+            if filepath:match("^/mnt/siarnaq-home/") then
+              vim.opt_local.fixeol = false
+            end
+          end
+        '';
+      };
+    }
+  ];
 }
