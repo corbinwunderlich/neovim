@@ -12,5 +12,6 @@
     ./noice.nix
     ./harpoon.nix
     ./git.nix
+    ./tmux.nix
   ];
 }
