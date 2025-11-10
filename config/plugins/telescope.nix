@@ -13,12 +13,12 @@
         action = "find_files";
       };
 
-      "<C-P>" = {
-        action = "git_files";
-      };
-
       "<leader>ps" = {
         action = "live_grep";
+      };
+
+      "<leader>?" = {
+        action = "keymaps";
       };
     };
 
@@ -36,10 +36,10 @@
           selection_caret = " ❯ ";
         };
 
-        git_files = {
+        keymaps = {
           theme = "dropdown";
           prompt_prefix = " ❯ ";
-          selection_caret = " ❯ ";
+          selection_caret = "❯ ";
         };
       };
     };
