@@ -8,6 +8,16 @@
     extensions.ui-select.enable = true;
     extensions.media-files.enable = true;
 
+    extensions.fzf-native = {
+      enable = true;
+
+      settings = {
+        fuzzy = true;
+        override_generic_sorter = true;
+        override_file_sorter = true;
+      };
+    };
+
     keymaps = {
       "<leader>pf" = {
         action = "find_files";
