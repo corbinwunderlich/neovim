@@ -2,12 +2,14 @@
   # Needed to get rid of deprecation warning
   plugins.web-devicons.enable = true;
 
+  dependencies.ripgrep.enable = true;
+  dependencies.fzf.enable = true;
+
   plugins.telescope = {
     enable = true;
 
     extensions.ui-select.enable = true;
     extensions.media-files.enable = true;
-    extensions.fzy-native.enable = true;
 
     keymaps = {
       "<leader>pf" = {
