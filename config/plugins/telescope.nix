@@ -2,6 +2,9 @@
   # Needed to get rid of deprecation warning
   plugins.web-devicons.enable = true;
 
+  dependencies.ripgrep.enable = true;
+  dependencies.fzf.enable = true;
+
   plugins.telescope = {
     enable = true;
 
