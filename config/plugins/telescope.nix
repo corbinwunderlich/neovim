@@ -10,6 +10,7 @@
 
     extensions.ui-select.enable = true;
     extensions.media-files.enable = true;
+    extensions.frecency.enable = true;
 
     keymaps = {
       "<leader>pf" = {
@@ -26,6 +27,8 @@
     };
 
     settings = {
+      file_ignore_patterns = ["node_modules"];
+
       pickers = {
         find_files = {
           theme = "dropdown";
