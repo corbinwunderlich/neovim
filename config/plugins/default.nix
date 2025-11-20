@@ -13,5 +13,6 @@
     ./harpoon.nix
     ./git.nix
     ./tmux.nix
+    ./flash.nix
   ];
 }
