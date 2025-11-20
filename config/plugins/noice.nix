@@ -3,6 +3,10 @@
     enable = true;
 
     settings = {
+      lsp = {
+        hover.enabled = false;
+      };
+
       cmdline = {
         enable = true;
 

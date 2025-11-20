@@ -14,6 +14,8 @@
     linebreak = true;
     incsearch = true;
     scrolloff = 8;
+
+    winborder = "rounded";
   };
 
   autoCmd = [
