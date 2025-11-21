@@ -14,18 +14,6 @@
     	bg = colors.bg_light,
     }
 
-    highlights.LineNr = {
-    	fg = "#6e7e7f",
-    }
-
-    highlights.LineNrAbove = {
-    	fg = "#6e7e7f",
-    }
-
-    highlights.LineNrBelow = {
-    	fg = "#6e7e7f",
-    }
-
     highlights.RenderMarkdownCode = {
     	highlights = colors.bg_light,
     }
