@@ -41,6 +41,19 @@
     highlights.RenderMarkdownH6Bg = {
     	bg = colors.bg_light,
     }
+
+    highlights.PmenuThumb = {
+        bg = border,
+    }
+
+    highlights.PmenuSbar = {
+        bg = border,
+    }
+
+    highlights.PmenuSel = {
+        bg = colors.bg_light,
+        fg = border,
+    }
   '';
 in {
   colorschemes = {

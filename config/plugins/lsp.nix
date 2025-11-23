@@ -64,11 +64,14 @@
 
     settings = {
       completion = {
-        menu = {border = "single";};
-        documentation = {window = {border = "single";};};
+        menu = {border = "rounded";};
+        documentation = {
+          auto_show = true;
+          window = {border = "rounded";};
+        };
       };
 
-      signature = {window = {border = "single";};};
+      signature = {window = {border = "rounded";};};
 
       sources = {
         providers.todo = {
