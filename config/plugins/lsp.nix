@@ -101,7 +101,7 @@
         owner = "cche";
         repo = "todo-txt.nvim";
         rev = "main";
-        hash = "sha256-SuwH8rkQBZDETRkO68gdX5cJc/X75B7QRR1IiOnht6Y=";
+        hash = "sha256-5dpEqrlGvYkJ2ZG/AvIQES0C+s1eg3uZZF4YPur2HC0=";
       };
     })
   ];
