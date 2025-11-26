@@ -14,5 +14,6 @@
     ./git.nix
     ./tmux.nix
     ./flash.nix
+    ./avante.nix
   ];
 }

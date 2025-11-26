@@ -46,6 +46,8 @@
     settings = {
       render_modes = true;
 
+      file_types = ["markdown" "Avante"];
+
       completions.lsp.enabled = true;
 
       heading = {
