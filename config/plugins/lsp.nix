@@ -88,9 +88,7 @@
         ];
       };
 
-      fuzzy = {
-        use_unsafe_no_lock = true;
-      };
+      fuzzy.frecency.use_unsafe_no_lock = true;
     };
   };
 
