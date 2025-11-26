@@ -42,6 +42,14 @@
     	bg = colors.bg_light,
     }
 
+    highlights.RenderMarkdownBullet = {
+        fg = "#636DA6",
+    };
+
+    highlights.RenderMarkdownDash = {
+        fg = "#636DA6",
+    };
+
     highlights.PmenuThumb = {
         bg = border,
     }

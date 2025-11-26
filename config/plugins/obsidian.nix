@@ -42,6 +42,8 @@
     settings = {
       render_modes = true;
 
+      completions.lsp.enabled = true;
+
       heading = {
         border = true;
         above = " ";
@@ -61,7 +63,7 @@
       };
 
       bullet = {
-        right_pad = 1;
+        icons = [""];
       };
     };
   };
