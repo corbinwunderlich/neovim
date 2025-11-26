@@ -12,6 +12,15 @@
         model = "qwen3-coder:30b";
         api_key_name = "OLLAMA_API_KEY";
       };
+
+      windows = {
+        edit.border = "rounded";
+
+        ask = {
+          floating = true;
+          border = "rounded";
+        };
+      };
     };
   };
 }
