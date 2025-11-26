@@ -29,7 +29,7 @@
     settings = {
       render_modes = true;
 
-      file_types = ["markdown" "Avante"];
+      file_types = ["markdown" "Avante" "codecompanion"];
 
       completions.lsp.enabled = true;
 

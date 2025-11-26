@@ -1,24 +1,54 @@
 {...}: {
   plugins.blink-compat.enable = true;
 
-  plugins.avante = {
+  plugins.img-clip.enable = true;
+
+  plugins.codecompanion = {
     enable = true;
 
     settings = {
-      provider = "ollama";
-      providers.ollama = {
-        __inherited_from = "openai";
-        endpoint = "https://ollama.wcopy.net/v1";
-        model = "qwen3-coder:30b";
-        api_key_name = "OLLAMA_API_KEY";
+      adapters.http.ollama = {
+        __raw = ''
+          function ()
+            return require("codecompanion.adapters").extend("ollama", {
+              env = {
+                url = "https://ollama.wcopy.net",
+                api_key = "OLLAMA_API_KEY",
+              },
+              parameters = {
+                sync = true,
+              },
+              schema = {
+                model = {
+                  default = "qwen3-coder:30b",
+                },
+                num_ctx = {
+                  default = 32768
+                }
+              },
+              headers = {
+                ["Authorization"] = "Bearer ''\${api_key}",
+                ["Content-Type"] = "application/json",
+              },
+            })
+          end
+        '';
       };
 
-      windows = {
-        edit.border = "rounded";
+      strategies = {
+        chat.adapter = "ollama";
+        cmd.adapter = "ollama";
+        inline.adapter = "ollama";
+      };
 
-        ask = {
-          floating = true;
-          border = "rounded";
+      display = {
+        chat = {
+          window = {
+            layout = "float";
+            border = "rounded";
+          };
+
+          show_settings = true;
         };
       };
     };
