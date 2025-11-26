@@ -36,6 +36,10 @@
     };
   };
 
+  plugins.image = {
+    enable = true;
+  };
+
   plugins.render-markdown = {
     enable = true;
 
