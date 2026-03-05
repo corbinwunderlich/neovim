@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   plugins.lsp = {
     enable = true;
 
@@ -92,6 +88,23 @@
     };
   };
 
+  plugins.tiny-inline-diagnostic = {
+    enable = true;
+
+    settings = {
+      preset = "minimal";
+
+      transparent_bg = true;
+      transparent_cursorline = true;
+
+      options = {
+        set_arrow_to_diag_color = true;
+
+        throttle = 0;
+      };
+    };
+  };
+
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
       name = "todo-txt.nvim";
@@ -105,12 +118,12 @@
   ];
 
   extraConfigLuaPost = ''
-        require("todo-txt").setup {
-            todo_file = vim.fn.expand("~/Documents/todo.txt"),
-            disable_default_mappings = true
-        }
+    require("todo-txt").setup {
+      todo_file = vim.fn.expand("~/Documents/todo.txt"),
+      disable_default_mappings = true
+    }
 
-        vim.keymap.set("n", "<leader>tt", ":TodoList<CR>", { desc = "Todo List", noremap = true, silent = true })
+    vim.keymap.set("n", "<leader>tt", ":TodoList<CR>", { desc = "Todo List", noremap = true, silent = true })
     vim.keymap.set("n", "<leader>ta", ":TodoAdd<CR>", { desc = "Add Todo", noremap = true, silent = true })
     vim.keymap.set("n", "<leader>td", ":TodoDue<CR>", { desc = "Due Tasks", noremap = true, silent = true })
     vim.keymap.set("n", "<leader>tz", ":TodoArchive<CR>", { desc = "Archive Done Tasks", noremap = true, silent = true })
