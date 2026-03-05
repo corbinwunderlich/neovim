@@ -70,7 +70,7 @@ in {
       sections = {
         lualine_a = ["mode"];
         lualine_b = ["branch"];
-        lualine_c = [""];
+        lualine_c = ["diagnostics"];
         lualine_x = [""];
         lualine_y = ["vim.fn.wordcount().words" "encoding" "filetype"];
         lualine_z = [""];
