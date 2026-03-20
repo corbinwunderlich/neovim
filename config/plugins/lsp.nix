@@ -21,6 +21,24 @@
       html.enable = true;
 
       svelte.enable = true;
+
+      cssls.enable = true;
+
+      jsonls.enable = true;
+
+      tombi.enable = true;
+
+      yamlls.enable = true;
+
+      docker_language_server.enable = true;
+
+      rust_analyzer = {
+        enable = true;
+        installCargo = true;
+        installRustc = true;
+      };
+
+      gopls.enable = true;
     };
 
     keymaps = {
