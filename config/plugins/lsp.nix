@@ -16,7 +16,10 @@
 
       arduino_language_server.enable = true;
 
-      clangd.enable = true;
+      clangd = {
+        enable = true;
+        packageFallback = true;
+      };
 
       html.enable = true;
 
