@@ -33,6 +33,8 @@
 
       yamlls.enable = true;
 
+      tofu_ls.enable = true;
+
       docker_language_server.enable = true;
 
       rust_analyzer = {
