@@ -37,6 +37,11 @@
 
       docker_language_server.enable = true;
 
+      prismals = {
+        enable = true;
+        package = pkgs.prisma-language-server;
+      };
+
       rust_analyzer = {
         enable = true;
         installCargo = true;
