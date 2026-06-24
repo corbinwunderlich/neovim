@@ -5,11 +5,6 @@
     autoLoad = true;
 
     settings = {
-      completion = {
-        min_chars = 2;
-        blink = true;
-      };
-
       workspaces = [
         {
           name = "tenth-grade";

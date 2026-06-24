@@ -3,7 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
@@ -25,21 +30,20 @@
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
-          inherit system; # or alternatively, set `pkgs`
           module = import ./config;
+
           extraSpecialArgs = {
+            pkgs = import nixpkgs {
+              inherit system;
+              config.allowUnfree = true;
+            };
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {
-        checks = {
-          default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-        };
+        checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
 
-        packages = {
-          default = nvim;
-          alejandra = nixpkgs.legacyPackages.${system}.alejandra;
-        };
+        packages.default = nvim;
       };
     };
 }
